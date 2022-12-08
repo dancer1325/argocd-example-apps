@@ -7,6 +7,7 @@ to explore ArgoCD and GitOps!
 | Application | Description |
 |-------------|-------------|
 | [guestbook](guestbook/) | A hello word guestbook app as plain YAML |
+| [guestbook-with-sub-directories](guestbook-with-sub-directories/) | A hello word guestbook app as plain YAML organized by subdirectories |
 | [ksonnet-guestbook](ksonnet-guestbook/) | The guestbook app as a ksonnet app |
 | [helm-guestbook](helm-guestbook/) | The guestbook app as a Helm chart |
 | [jsonnet-guestbook](jsonnet-guestbook/) | The guestbook app as a raw jsonnet |
