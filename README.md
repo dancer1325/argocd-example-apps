@@ -20,3 +20,7 @@ to explore ArgoCD and GitOps!
 | [plugins](plugins/) | Apps which demonstrate config management plugins usage |
 | [blue-green](blue-green/) | Demonstrates how to implement blue-green deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)
 | [apps](apps/) | An app composed of other apps |
+
+
+## How has the private repo been created?
+* Follow the first 3 steps of https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274
