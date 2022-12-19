@@ -3,6 +3,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: upgrade-sql-schema-1
+  # Resources hook type with Sync Wave
   annotations:
     argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/sync-wave: "0"
@@ -19,6 +20,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: upgrade-sql-schema-2
+  # Resources hook type with Sync Wave
   annotations:
     argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/sync-wave: "1"
@@ -35,6 +37,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: backend
+  # Since no annotation at all, by default Sync phase and wave 0
 spec:
   replicas: 1
   selector:
@@ -53,6 +56,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend
+  # Since no annotation at all, by default Sync phase and wave 0
 spec:
   selector:
     tier: backend
@@ -65,6 +69,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: maint-page-up
+  # Resources hook type with hook deletion policy and sync Wave
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
@@ -83,6 +88,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: frontend
+  # Resources sync Wave. Since no annotation about phase, by default Sync phase
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
@@ -103,6 +109,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend
+  # Resources sync Wave. Since no annotation about phase, by default Sync phase
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
@@ -117,6 +124,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: maint-page-down
+  # Resources hook type with hook deletion policy and sync Wave
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
