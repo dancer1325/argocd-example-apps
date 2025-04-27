@@ -19,3 +19,6 @@
 | [plugins](plugins/) | Apps which demonstrate config management plugins usage |
 | [blue-green](blue-green/) | Demonstrates how to implement blue-green deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)
 | [apps](apps/) | An app composed of other apps |
+
+## Requirements
+* follow [this](https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd)
