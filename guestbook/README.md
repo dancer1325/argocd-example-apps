@@ -31,3 +31,13 @@
             * `argocd app sync example.guestbook --local .`
   * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=
     * check the changes are applied DIRECTLY 
+
+
+## application's state | cluster
+* ways to check
+  * | Argo CD UI
+    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=
+  * -- via -- Argo CD cli
+    * `argocd app get example.guestbook`
+  * -- via -- `kubectl`
+    * `kubectl get all -n guestbook`
