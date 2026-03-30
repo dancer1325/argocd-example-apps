@@ -5,7 +5,7 @@ metadata:
 spec:
   # modify to cause a drift
   #replicas: 1
-  replicas: 3
+  replicas: 5
   revisionHistoryLimit: 3
   selector:
     matchLabels:
