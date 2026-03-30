@@ -2,35 +2,32 @@
 
 | Application                                                       | Description |
 |-------------------------------------------------------------------|-------------|
-| [guestbook](guestbook/)                                           | A hello word guestbook app as plain YAML |
 | [guestbook-with-sub-directories](guestbook-with-sub-directories/) | A hello word guestbook app as plain YAML organized by subdirectories |
 | [ksonnet-guestbook](ksonnet-guestbook/)                           | The guestbook app as a ksonnet app |
 | [helm-guestbook](helm-guestbook/)                                 | The guestbook app as a Helm chart |
 | [jsonnet-guestbook](jsonnet-guestbook/)                           | The guestbook app as a raw jsonnet |
 | [jsonnet-guestbook-tla](jsonnet-guestbook-tla/)                   | The guestbook app as a raw jsonnet with support for top level arguments |
-| [kustomize-guestbook](kustomize-guestbook/)                       | The guestbook app as a Kustomize 2 app |
 | [pre-post-sync](pre-post-sync/)                                   | Demonstrates Argo CD PreSync and PostSync hooks |
 | [sync-waves](sync-waves/)                                         | Demonstrates Argo CD sync waves with hooks |
 | [helm-dependency](helm-dependency/)                               | Demonstrates how to customize an OTS (off-the-shelf) helm chart from an upstream repo |
 | [sock-shop](sock-shop/)                                           | A microservices demo app (https://microservices-demo.github.io) |
 | [plugins](plugins/)                                               | Apps which demonstrate config management plugins usage |
 | [blue-green](blue-green/)                                         | Demonstrates how to implement blue-green deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)
-| [apps](apps/)                                                     | An app composed of other apps |
 
 TODO:
 
 
-| Status                                                                    | Application                                        | Description                                                                                                              |
-| ------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| [![App Status][badge_sync_example_apps]][app_sync_example_apps]           | [apps](apps/)                                      | An app composed of other apps synchronized in [cd.apps.argoproj.io][app_sync_example_apps]                               |
+| Demo Status                                                               | Application                                        | Description                                                                                                              |
+|---------------------------------------------------------------------------| -------------------------------------------------- |--------------------------------------------------------------------------------------------------------------------------|
+| [![App Status][badge_sync_example_apps]][app_sync_example_apps]           | [apps](apps/)                                      | App of OTHER apps (REST of folders) <br/> customized -- via -- helm                                                      |
 | [![App Status][badge_blue_green]][app_blue_green]                         | [blue-green](blue-green/)                          | Demonstrates how to implement blue-green deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)     |
-| [![App Status][badge_guestbook]][app_guestbook]                           | [guestbook](guestbook/)                            | A hello word guestbook app as plain YAML                                                                                 |
+| [![App Status][badge_guestbook]][app_guestbook]                           | [guestbook](guestbook/)                            | hello word guestbook app -- as -- plain YAML                                                                             |
 | [![App Status][badge_helm_dependency]][app_helm_dependency]               | [helm-dependency](helm-dependency/)                | Demonstrates how to customize an OTS (off-the-shelf) helm chart from an upstream repo                                    |
 | [![App Status][badge_helm_guestbook]][app_helm_guestbook]                 | [helm-guestbook](helm-guestbook/)                  | The guestbook app as a Helm chart                                                                                        |
 | [![App Status][badge_helm_hooks]][app_helm_hooks]                         | [helm-hooks](helm-hooks/)                          | An application with native Helm hooks                                                                                    |
 | [![App Status][badge_jsonnet_guestbook]][app_jsonnet_guestbook]           | [jsonnet-guestbook](jsonnet-guestbook/)            | The guestbook app as a raw jsonnet                                                                                       |
 | [![App Status][badge_jsonnet_guestbook_tla]][app_jsonnet_guestbook_tla]   | [jsonnet-guestbook-tla](jsonnet-guestbook-tla/)    | The guestbook app as a raw jsonnet with support for top level arguments                                                  |
-| [![App Status][badge_kustomize_guestbook]][app_kustomize_guestbook]       | [kustomize-guestbook](kustomize-guestbook/)        | The guestbook app as a Kustomize app                                                                                     |
+| [![App Status][badge_kustomize_guestbook]][app_kustomize_guestbook]       | [kustomize-guestbook](kustomize-guestbook/)        | guestbook app -- as a -- Kustomize app                                                                                   |
 | [![App Status][badge_plugin_kasane]][app_plugin_kasane]                   | [plugins/kasane](plugins/kasane)                   | Apps which demonstrate config management plugins usage with [kasane](plugins/kasane/README.md)                           |
 | [![App Status][badge_plugin_kustomized_helm]][app_plugin_kustomized_helm] | [plugins/kustomized-helm](plugins/kustomized-helm) | Apps which demonstrate config management plugins usage with a [kustomized helm chart](plugins/kustomized-helm/README.md) |
 | [![App Status][badge_pre_post_sync]][app_pre_post_sync]                   | [pre-post-sync](pre-post-sync/)                    | Demonstrates Argo CD PreSync and PostSync hooks                                                                          |
@@ -66,6 +63,22 @@ TODO:
 [app_sync_waves]: https://cd.apps.argoproj.io/applications/example.sync-waves
 [badge_sync_waves]: https://cd.apps.argoproj.io/api/badge?revision=true&name=example.sync-waves
 
-
-## Requirements
+## how to run locally?
+### Requirements
 * [install Argo CD](https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd)
+  * install | argocd
+* Argo CD UI port forward
+  * `kubectl port-forward service/argocd-server -n argocd 8080:443`
+  * `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d`
+    * get INITIAL admin password
+* | browser,
+  * http://localhost:8080
+    * user: admin
+    * password: initialAdminPassword
+
+### steps
+* deploy guestbook app
+  * _Example:_ -- via --[kustomize](kustomize-guestbook)
+* [deploy Argo CD Application](apps)
+
+TODO: 

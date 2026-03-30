@@ -5,8 +5,12 @@ kind: Application
 metadata:
   name: {{ printf "example.%s" .name | quote }}
   namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
+  # 3. comment to force removal
+  #finalizers:
+  # 1. OFFICIAL value, ALTHOUGH NOT follow strictly Kubernetes conventions: domain/name
+  #- resources-finalizer.argocd.argoproj.io
+  # 2. follow Kubernetes conventions
+  #- argocd.argoproj.io/resources-finalizer
 spec:
   destination:
     namespace: {{ .namespace | default .name | quote }}
