@@ -3,7 +3,9 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
-  replicas: 1
+  # modify to cause a drift
+  #replicas: 1
+  replicas: 3
   revisionHistoryLimit: 3
   selector:
     matchLabels:

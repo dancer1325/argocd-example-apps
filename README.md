@@ -1,10 +1,11 @@
 # ArgoCD Example Apps
 
+TODO: clean as soon as I update next table
+
 | Application                                                       | Description |
 |-------------------------------------------------------------------|-------------|
 | [guestbook-with-sub-directories](guestbook-with-sub-directories/) | A hello word guestbook app as plain YAML organized by subdirectories |
 | [ksonnet-guestbook](ksonnet-guestbook/)                           | The guestbook app as a ksonnet app |
-| [helm-guestbook](helm-guestbook/)                                 | The guestbook app as a Helm chart |
 | [jsonnet-guestbook](jsonnet-guestbook/)                           | The guestbook app as a raw jsonnet |
 | [jsonnet-guestbook-tla](jsonnet-guestbook-tla/)                   | The guestbook app as a raw jsonnet with support for top level arguments |
 | [pre-post-sync](pre-post-sync/)                                   | Demonstrates Argo CD PreSync and PostSync hooks |
@@ -14,7 +15,7 @@
 | [plugins](plugins/)                                               | Apps which demonstrate config management plugins usage |
 | [blue-green](blue-green/)                                         | Demonstrates how to implement blue-green deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)
 
-TODO:
+
 
 
 | Demo Status                                                               | Application                                        | Description                                                                                                              |
@@ -23,7 +24,7 @@ TODO:
 | [![App Status][badge_blue_green]][app_blue_green]                         | [blue-green](blue-green/)                          | Demonstrates how to implement blue-green deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)     |
 | [![App Status][badge_guestbook]][app_guestbook]                           | [guestbook](guestbook/)                            | hello word guestbook app -- as -- plain YAML                                                                             |
 | [![App Status][badge_helm_dependency]][app_helm_dependency]               | [helm-dependency](helm-dependency/)                | Demonstrates how to customize an OTS (off-the-shelf) helm chart from an upstream repo                                    |
-| [![App Status][badge_helm_guestbook]][app_helm_guestbook]                 | [helm-guestbook](helm-guestbook/)                  | The guestbook app as a Helm chart                                                                                        |
+| [![App Status][badge_helm_guestbook]][app_helm_guestbook]                 | [helm-guestbook](helm-guestbook/)                  | guestbook app -- as a -- Helm chart                                                                                      |
 | [![App Status][badge_helm_hooks]][app_helm_hooks]                         | [helm-hooks](helm-hooks/)                          | An application with native Helm hooks                                                                                    |
 | [![App Status][badge_jsonnet_guestbook]][app_jsonnet_guestbook]           | [jsonnet-guestbook](jsonnet-guestbook/)            | The guestbook app as a raw jsonnet                                                                                       |
 | [![App Status][badge_jsonnet_guestbook_tla]][app_jsonnet_guestbook_tla]   | [jsonnet-guestbook-tla](jsonnet-guestbook-tla/)    | The guestbook app as a raw jsonnet with support for top level arguments                                                  |

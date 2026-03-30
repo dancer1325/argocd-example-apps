@@ -13,3 +13,6 @@
 
 # how to uninstall locally?
 * TODO:
+
+# structure
+* TODO: add diagram of ALL apps with ALL namespaces installed
