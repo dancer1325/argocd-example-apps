@@ -56,6 +56,12 @@
 ## demo
 * [Argo CD UI](https://cd.apps.argoproj.io/applications/argocd/example.guestbook?resource=)
 
+# Sync Operation Status, ALLOWED values: syncing, sync ok, sync error, sync failed, unknown
+## locally
+* TODO: update to Argo CD v3.4.0
+## demo
+* [here](https://cd.apps.argoproj.io/applications?proj=&sync=&autoSync=&health=&namespace=&cluster=&labels=&annotations=&operation=)
+
 # Health == application's health
 ## locally
 * ways to check
