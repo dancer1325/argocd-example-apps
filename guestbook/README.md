@@ -34,6 +34,7 @@
 
 
 # application's state | cluster
+## locally
 * ways to check
   * | Argo CD UI
     * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=
@@ -41,12 +42,26 @@
     * `argocd app get example.guestbook`
   * -- via -- `kubectl`
     * `kubectl get all -n guestbook`
+## demo
+* [Argo CD UI](https://cd.apps.argoproj.io/applications/argocd/example.guestbook?resource=)
 
 # Sync Status: | sync, live state vs target state
+## locally
 * ways to check
   * | Argo CD UI
     * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > left pannel
   * -- via -- Argo CD cli
     * `argocd app get example.guestbook` 
       * check "STATUS" column
-0
+## demo
+* [Argo CD UI](https://cd.apps.argoproj.io/applications/argocd/example.guestbook?resource=)
+
+# Health == application's health
+## locally
+* ways to check
+  * | Argo CD UI
+    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=
+  * -- via -- Argo CD cli
+    * `argocd app get example.guestbook`
+## demo
+* [Argo CD UI](https://cd.apps.argoproj.io/applications/argocd/example.guestbook?resource=)
