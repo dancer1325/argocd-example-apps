@@ -78,8 +78,4 @@ TODO: clean as soon as I update next table
     * password: initialAdminPassword
 
 ### steps
-* deploy guestbook app
-  * _Example:_ -- via --[kustomize](kustomize-guestbook)
 * [deploy Argo CD Application](apps)
-
-TODO: 
