@@ -4,7 +4,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ printf "example.%s" .name | quote }}
-  namespace: argocd
+  namespace: {{ $.Release.Namespace | default "argocd" }}
   # 3. comment to force removal
   #finalizers:
   # 1. OFFICIAL value, ALTHOUGH NOT follow strictly Kubernetes conventions: domain/name
