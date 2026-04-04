@@ -35,6 +35,8 @@
   * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=
     * check the changes are applied DIRECTLY 
 
+# sync
+* TODO: 
 
 # application's state | cluster
 ## locally
@@ -64,6 +66,8 @@
 * TODO: update to Argo CD v3.4.0
 ## demo
 * [here](https://cd.apps.argoproj.io/applications?proj=&sync=&autoSync=&health=&namespace=&cluster=&labels=&annotations=&operation=)
+
+# refresh
 
 # Health == application's health
 ## locally
