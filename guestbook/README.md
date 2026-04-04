@@ -4,11 +4,14 @@
 # how to check it's tracked?
 * adjust something / cause desired state != cluster state
   * _Example:_ [replicas](guestbook-ui-deployment.yaml)
-* | browser,
-  * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=&rollback=-1
-    * AFTER reconcile time, 
-      * check it's redeployed
-      * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=&rollback=0
+* ways
+  * | browser,
+    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=&rollback=-1
+      * AFTER reconcile time, 
+        * check it's redeployed
+        * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=&rollback=0
+  * `kubectl get all -n guestbook`
+    * check NUMBER of replicas were modified
 
 # uploading DIRECTLY (WITHOUT pushing | Git) local manifests -- via -- `argocd app sync APPNAME --local ...`
 * steps
