@@ -12,7 +12,7 @@
       * check Argo CD Applications are installed
 
 # how to uninstall locally?
-* TODO:
+* `helm uninstall apps --namespace argocd`
 
 # structure
 * TODO: add diagram of ALL apps with ALL namespaces installed

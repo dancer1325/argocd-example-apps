@@ -1,0 +1,12 @@
+{{- if .Values.clusters }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-info
+data:
+  clusters.yaml: |
+      {{- range .Values.clusters }}
+      - name: {{ .name }}
+        server: {{ .server }}
+      {{- end }}
+{{- end }}
