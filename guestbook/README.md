@@ -36,6 +36,10 @@
     * check the changes are applied DIRECTLY 
 
 # sync
+* steps
+  * adjust something
+    * _Example:_ [replicas](guestbook-ui-deployment.yaml)
+  * `git commit -m "chore: cause a drift" && git push`
 * TODO: 
 
 # application's state | cluster
@@ -54,7 +58,7 @@
 ## locally
 * ways to check
   * | Argo CD UI
-    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > left pannel
+    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > left panel
   * -- via -- Argo CD cli
     * `argocd app get example.guestbook` 
       * check "STATUS" column
@@ -68,6 +72,18 @@
 * [here](https://cd.apps.argoproj.io/applications?proj=&sync=&autoSync=&health=&namespace=&cluster=&labels=&annotations=&operation=)
 
 # refresh
+* ways to check
+  * | Argo CD UI
+    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > click "refresh"
+  * -- via -- Argo CD cli
+    * `argocd app get example.guestbook --refresh`
+
+# refresh
+* ways to check
+  * | Argo CD UI
+    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > click "hard refresh"
+  * -- via -- Argo CD cli
+    * `argocd app get example.guestbook --hard-refresh`
 
 # Health == application's health
 ## locally
