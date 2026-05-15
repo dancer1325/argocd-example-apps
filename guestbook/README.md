@@ -39,7 +39,7 @@
 * steps
   * adjust something
     * _Example:_ [replicas](guestbook-ui-deployment.yaml)
-  * `git commit -m "chore: cause a drift" && git push`
+  * `git add . && git commit -m "chore: cause a drift" && git push`
 * TODO: 
 
 # application's state | cluster
