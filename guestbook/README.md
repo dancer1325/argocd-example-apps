@@ -35,12 +35,28 @@
   * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource=
     * check the changes are applied DIRECTLY 
 
+# refresh
+* ways to check
+  * | Argo CD UI
+    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > click "refresh"
+  * -- via -- Argo CD cli
+    * `argocd app get example.guestbook --refresh`
+
+# hard refresh
+* ways to check
+  * | Argo CD UI
+    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > click "hard refresh"
+  * -- via -- Argo CD cli
+    * `argocd app get example.guestbook --hard-refresh`
+
 # sync
 * steps
   * adjust something
     * _Example:_ [replicas](guestbook-ui-deployment.yaml)
   * `git add . && git commit -m "chore: cause a drift" && git push`
-* TODO: 
+  * ways to sync
+    * `argocd app sync example.guestbook-nosync`
+    * ArgoCD UI, https://localhost:8080/applications/argocd/example.guestbook-nosync?view=tree&resource= > click sync
 
 # application's state | cluster
 ## locally
@@ -70,20 +86,6 @@
 * TODO: update to Argo CD v3.4.0
 ## demo
 * [here](https://cd.apps.argoproj.io/applications?proj=&sync=&autoSync=&health=&namespace=&cluster=&labels=&annotations=&operation=)
-
-# refresh
-* ways to check
-  * | Argo CD UI
-    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > click "refresh"
-  * -- via -- Argo CD cli
-    * `argocd app get example.guestbook --refresh`
-
-# refresh
-* ways to check
-  * | Argo CD UI
-    * https://localhost:8080/applications/argocd/example.guestbook?view=tree&resource= > click "hard refresh"
-  * -- via -- Argo CD cli
-    * `argocd app get example.guestbook --hard-refresh`
 
 # Health == application's health
 ## locally
