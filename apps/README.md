@@ -14,5 +14,8 @@
 # how to uninstall locally?
 * `helm uninstall apps --namespace argocd`
 
+# how to upgrade locally?
+* `helm upgrade apps . --namespace argocd`
+
 # structure
 * TODO: add diagram of ALL apps with ALL namespaces installed

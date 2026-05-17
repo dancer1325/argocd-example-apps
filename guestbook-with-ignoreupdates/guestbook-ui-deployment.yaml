@@ -2,6 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: guestbook-ui-with-ignoreupdates
+  annotations:
+    # apply ONLY | this OWN deployment
+    #   -> NOT apply | dependent ReplicaSet or Pod
+    argocd.argoproj.io/ignore-resource-updates: 'true'
 spec:
   # modify to cause a drift
   #replicas: 1
