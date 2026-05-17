@@ -12,6 +12,7 @@ applications:
       helm:
         releaseName: blue-green
   - name: guestbook
+  - name: guestbook-with-ignoreupdates
   - name: helm-dependency
     tool:
       helm:
