@@ -4,8 +4,8 @@ metadata:
   name: guestbook-ui
 spec:
   # modify to cause a drift
-  #replicas: 1
-  replicas: 2
+  replicas: 1
+  #replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
