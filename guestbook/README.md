@@ -96,3 +96,7 @@
     * `argocd app get example.guestbook`
 ## demo
 * [Argo CD UI](https://cd.apps.argoproj.io/applications/argocd/example.guestbook?resource=)
+
+# how to revert commits?
+* `git revert <COMMIT_SHA> --no-edit`
+* `git push`
