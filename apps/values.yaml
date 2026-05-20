@@ -43,3 +43,6 @@ applications:
   - name: pre-post-sync
   - name: sock-shop
   - name: sync-waves
+  - name: sync-options-multiple
+    path: sync-options/multiple
+
