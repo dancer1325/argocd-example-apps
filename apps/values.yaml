@@ -45,6 +45,8 @@ applications:
   - name: sync-waves
   - name: sync-options-multiple
     path: sync-options/multiple
+  - name: sync-options-prune
+    path: sync-options/prune
   - name: compare-options
   - name: compare-options-with-prune
 
