@@ -47,6 +47,8 @@ applications:
     path: sync-options/multiple
   - name: sync-options-prune
     path: sync-options/prune
+  - name: sync-options-delete-false
+    path: sync-options/delete-false
   - name: compare-options
   - name: compare-options-with-prune
 
