@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-ui-namespace-specified-on-childs
+  namespace: sync-options-namespace-specified-on-childs
+spec:
+  # modify to cause a drift
+  replicas: 1
+  #replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-ui
+  template:
+    metadata:
+      labels:
+        app: guestbook-ui
+    spec:
+      containers:
+        - image: gcr.io/google-samples/gb-frontend:v5
+          name: guestbook-ui-namespace-specified-on-childs
+          ports:
+            - containerPort: 80

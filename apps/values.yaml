@@ -49,6 +49,8 @@ applications:
     path: sync-options/prune
   - name: sync-options-delete-false
     path: sync-options/delete-false
+  - name: sync-options-namespace-specified-on-childs
+    path: sync-options/namespace-specified-on-childs
   - name: compare-options
   - name: compare-options-with-prune
 
